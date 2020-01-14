@@ -51,7 +51,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-6 col-lg-3">
-            <a href="index.html">
+            <a href="#section1">
               <img src="images/logo.png" alt="Image" class="img-fluid" style="max-width:30%;">
             </a>
           </div>
@@ -93,7 +93,7 @@
           </div>
 
           <div class="col-6 d-block d-lg-none text-right">
-              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+              <a href="#section1" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
                 class="icon-menu h3"></span></a>
           </div>
         </div>
@@ -513,28 +513,28 @@
                 <h3 class="section-subtitle">Contactanos</h3>
                 <h2 class="section-title mb-4">Pide tu cotización</h2>
               </div>
-              <form action="#" class="quote-form">
+              <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeoM7LOhAt6rDcHnHgzVbj1VNnyCUILJjB5jeOuVNbkpS7kBA/formResponse" target="hidden_iframe" onsubmit="submitted=true;" class="quote-form">
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input type="text" class="form-control" name="entry.1984861968" placeholder="Nombre">
                   </div>
                   <div class="col-md-6 form-group">
-                    <input type="text" class="form-control" placeholder="Teléfono">
+                    <input type="text" class="form-control" name="entry.1805104862" placeholder="Teléfono">
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input type="text" class="form-control" placeholder="Correo Electrónico">
+                    <input type="text" class="form-control" name="entry.1390051505" placeholder="Correo Electrónico">
                   </div>
                   <div class="col-md-6 form-group">
-                    <input type="text" class="form-control" placeholder="Asunto">
+                    <input type="text" class="form-control" name="entry.642494662" placeholder="Asunto">
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-md-6">
-                    <textarea name="" class="form-control" id="" placeholder="Mensaje" cols="30" rows="7"></textarea>
+                    <textarea name="" class="form-control" id="" name="entry.1916338690" placeholder="Mensaje" cols="30" rows="7"></textarea>
                   </div>
                   <div class="col-md-6 align-self-end">
                     <input type="submit" class="btn btn-primary btn-block btn-lg rounded-0" value="Enviar">
@@ -542,6 +542,9 @@
                 </div>
                 
               </form>
+
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
             </div>
           </div>
         </div>
@@ -555,7 +558,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-6 col-lg-3">
-          <a href="index.html">
+          <a href="#section1">
             <img src="images/logo.png" alt="Image" class="img-fluid" style="max-width:30%;">
           </a>
         </div>
@@ -626,6 +629,14 @@
 
 
   <script src="js/main.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Su petición ha sido enviada');
+  });
+</script>
 
 </body>
 
