@@ -154,7 +154,7 @@ jQuery(document).ready(function($) {
 			$('.owl-slide-3').owlCarousel({
 				center: false,
 				items: 1,
-				loop: false,
+				loop: true,
 				stagePadding: 0,
 				margin: 30,
 				autoplay: false,
